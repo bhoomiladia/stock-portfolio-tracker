@@ -3,7 +3,7 @@ from tkinter import ttk, filedialog, messagebox
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 import matplotlib.pyplot as plt
-
+import numpy as np
 from utils import validate_inputs
 from portfolio import Portfolio
 
@@ -32,7 +32,7 @@ class PortfolioApp:
         self.style.configure("Treeview.Heading", font=('Arial', 11, 'bold'))
         self.style.configure("Treeview", font=('Arial', 10), rowheight=25, background="#ffffff")
         self.style.map("Treeview", background=[('selected', '#0078d7')], foreground=[('selected', 'white')])
--
+
         self.paned_window = ttk.PanedWindow(root, orient=tk.HORIZONTAL)
         self.paned_window.pack(fill=tk.BOTH, expand=True)
 
